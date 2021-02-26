@@ -2,29 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include <stdbool.h>
-
-
-#define DATA_SIZE 30000
-
-typedef struct 
-{
-    unsigned char  data[DATA_SIZE];
-    unsigned char* data_pointer;
-    bool           jmp_fwd; 
-    bool           jmp_bwd; 
-} MachineModel;
-
-MachineModel* new_MM()
-{
-    MachineModel* mm = (MachineModel*)malloc(sizeof(MachineModel));
-    for(int i = 0; i < DATA_SIZE;i++){
-        mm->data[i] = 0;
-    }
-    mm->data_pointer = &(mm->data[0]);
-    mm->jmp_fwd = 0;
-    mm->jmp_bwd = 0;
-    return mm;
-}
+#include "MachineModel.h"
 
 void run_instruction(MachineModel* mm, char* code)
 {
