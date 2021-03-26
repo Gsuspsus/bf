@@ -3,9 +3,9 @@
 
 #include "MachineModel.h"
 
-MachineModel* new_MM()
+machine_model* new_MM()
 {
-    MachineModel* mm = (MachineModel*)malloc(sizeof(MachineModel));
+    machine_model* mm = (machine_model*)malloc(sizeof(machine_model));
     for(int i = 0; i < TAPE_SIZE;i++){
         mm->tape[i] = 0;
     }
@@ -14,4 +14,3 @@ MachineModel* new_MM()
     mm->jmp_bwd = 0;
     return mm;
 }
-

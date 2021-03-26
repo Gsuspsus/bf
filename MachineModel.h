@@ -3,14 +3,14 @@
 
 #define TAPE_SIZE 30000
 
-typedef struct MachineModelTag
+typedef struct machine_model 
 {
     unsigned char  tape[TAPE_SIZE];
     unsigned char* data_pointer;
     bool           jmp_fwd; 
     bool           jmp_bwd; 
-} MachineModel;
+} machine_model;
 
-MachineModel* new_MM(void);
+machine_model* new_MM(void);
 
 #endif
